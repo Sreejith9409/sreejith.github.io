@@ -68,6 +68,18 @@
                 _day = _hour * 24;
 
             // calculate dates
+
+            var e = new Date("Dec 15 2019 10:30:00 GMT+0530"),
+            t = new Date,
+            r = Math.floor((e.getTime() - t.getTime()) / 1e3),
+            n = fixIntegers(r % 60);
+            r = Math.floor(r / 60);
+            var a = fixIntegers(r % 60);
+            r = Math.floor(r / 60);
+            var o = fixIntegers(r % 24);
+            r = Math.floor(r / 24);
+            var f = r;
+            $("#seconds").text(n), $("#minutes").text(a), $("#hours").text(o), $("#days").text(f)
             var days = Math.floor(difference / _day),
                 hours = Math.floor((difference % _day) / _hour),
                 minutes = Math.floor((difference % _hour) / _minute),
@@ -86,10 +98,10 @@
                 ref_seconds = (seconds === 1) ? 'second' : 'seconds';
 
             // set to DOM
-            container.find('.days').text(days);
-            container.find('.hours').text(hours);
-            container.find('.minutes').text(minutes);
-            container.find('.seconds').text(seconds);
+            container.find('.days').text(f);
+            container.find('.hours').text(o);
+            container.find('.minutes').text(a);
+            container.find('.seconds').text(n);
 
             container.find('.days_ref').text(ref_days);
             container.find('.hours_ref').text(ref_hours);
@@ -102,3 +114,7 @@
     };
 
 })(jQuery);
+
+function fixIntegers(e) {
+    return 0 > e && (e = 0), 10 > e ? "0" + e : "" + e
+}

@@ -2380,7 +2380,6 @@ header .menus nav ul li:last-child a {
   display: table-cell;
   vertical-align: middle;
   padding-left: 20px;
-  float: right;
 }
 @media only screen and (max-width: 320px) {
   .info_area_2 .info-list .content {
@@ -3499,17 +3498,19 @@ header .menus nav ul li:last-child a {
   position: relative;
   line-height: 100px;
   height: 100px;
-  background: #101010;
+  background: #2ca0f0;
 }
 @media only screen and (max-width: 480px) {
   .home_2 {
     height: auto;
     line-height: 26px;
-    padding: 50px 0;
+    padding: 100px 0;
   }
 }
 .home_2 .copyright {
   display: block;
+  text-align: center;
+  
 }
 @media only screen and (max-width: 768px) {
   .home_2 .copyright {
@@ -3518,4 +3519,5 @@ header .menus nav ul li:last-child a {
 }
 .home_2 .copyright p {
   margin: 0;
+  text-decoration-color: rgb(20, 13, 15);
 }
