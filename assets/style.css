@@ -1966,6 +1966,10 @@ header .menus nav ul li:last-child a {
   display: block;
   position: relative;
 }
+.about_area_2 .section-heading h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
 .response{
 	color: #fff;
     float: left;
